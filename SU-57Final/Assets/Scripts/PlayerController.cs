@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     public bool isOnGround = true;
     public bool gameOver = false;
 
+    public GameObject gameOverObject;
+    public int score = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +42,7 @@ public class PlayerController : MonoBehaviour
             {
                 gameOver = true;
                 Debug.Log("Game Over");
+                gameOverObject.gameObject.SetActive(true);
             }
         
     }

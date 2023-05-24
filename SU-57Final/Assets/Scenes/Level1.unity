@@ -2100,9 +2100,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1070528310, guid: 3f712b2cf0e116d45984da0d6ebd014e, type: 3}
+      propertyPath: jumpForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070528310, guid: 3f712b2cf0e116d45984da0d6ebd014e, type: 3}
       propertyPath: gameOverObject
       value: 
       objectReference: {fileID: 1381166513}
+    - target: {fileID: 8219095793265487489, guid: 3f712b2cf0e116d45984da0d6ebd014e, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 7aea2d469d67de44f9dd680a5088c739, type: 3}
+    - target: {fileID: 8219095793265487489, guid: 3f712b2cf0e116d45984da0d6ebd014e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 022cd8e9b1d113b41905bcb401343e62, type: 2}
     - target: {fileID: 8219095793272471905, guid: 3f712b2cf0e116d45984da0d6ebd014e, type: 3}
       propertyPath: m_RootOrder
       value: 2

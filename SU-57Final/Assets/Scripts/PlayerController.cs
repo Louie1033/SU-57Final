@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
 
     public GameObject gameOverObject;
     public int score = 0;
+    public bool level2;
+    public float movespeed = 10000;
+    
 
 
     // Start is called before the first frame update
@@ -26,12 +29,17 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround && level2 == false)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
             Debug.Log("Jump");
             playerAnim.SetTrigger("Jump_trig");
+            
+        }
+        if(level2 == true)
+        {
+            MoveSide();
         }
     }
 
@@ -48,6 +56,19 @@ public class PlayerController : MonoBehaviour
                 gameOverObject.gameObject.SetActive(true);
             }
         
+    }
+    public void MoveSide()
+    {
+        if(level2==true && Input.GetKey(KeyCode.LeftArrow) && transform.position.x <= -1)
+        {
+            playerRb.AddForce(0,1,1 * movespeed, ForceMode.Impulse);
+            Debug.Log("Left");
+            //transform.position = new Vector3(-12, 0, -1);
+        }
+        if (level2 == true && Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            transform.position = new Vector3(-12, 0, -10);
+        }
     }
    
 }

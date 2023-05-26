@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public GameObject gameOverObject;
     public int score = 0;
     public bool level2;
-    public float movespeed = 10000;
+    public float movespeed = 5;
     
 
 
@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
         if(level2 == true)
         {
             MoveSide();
+            Constraints();
         }
     }
 
@@ -59,15 +60,28 @@ public class PlayerController : MonoBehaviour
     }
     public void MoveSide()
     {
-        if(level2==true && Input.GetKey(KeyCode.LeftArrow) && transform.position.x <= -1)
+        if(level2==true && Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            playerRb.AddForce(0,1,1 * movespeed, ForceMode.Impulse);
-            Debug.Log("Left");
+            playerRb.AddForce(Vector3.forward * movespeed, ForceMode.Impulse);
+            
             //transform.position = new Vector3(-12, 0, -1);
         }
         if (level2 == true && Input.GetKeyDown(KeyCode.RightArrow))
         {
+            playerRb.AddForce(Vector3.back * movespeed, ForceMode.Impulse);
+        }
+    }
+    public void Constraints()
+    {
+        if(transform.position.z < -10 )
+        {
             transform.position = new Vector3(-12, 0, -10);
+            playerRb.AddForce(Vector3.forward * movespeed, ForceMode.Impulse);
+        }
+        if(transform.position.z > -1)
+        {
+            transform.position = new Vector3(-12, 0, -1);
+            playerRb.AddForce(Vector3.back * movespeed, ForceMode.Impulse);
         }
     }
    

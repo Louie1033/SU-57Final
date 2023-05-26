@@ -415,6 +415,7 @@ MonoBehaviour:
   obstaclePrefab: {fileID: 4272031334190172819, guid: 1e728c087a92849498e6135c281e8d17, type: 3}
   PlayerControllerScript: {fileID: 492061240}
   level: 1
+  tvObstaclePrefabs: []
 --- !u!1 &1381166513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7538657204276680987, guid: 59ec7668f7c5dbe48a57251e7624c572, type: 3}
@@ -910,6 +911,22 @@ PrefabInstance:
       propertyPath: gameOverObject
       value: 
       objectReference: {fileID: 1381166513}
+    - target: {fileID: 8219095793265487489, guid: 3f712b2cf0e116d45984da0d6ebd014e, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: c72c97e952bf7834b85e6164373d310d, type: 3}
+    - target: {fileID: 8219095793265487489, guid: 3f712b2cf0e116d45984da0d6ebd014e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1de385df2ff713a41adfcbbb63b8af91, type: 2}
+    - target: {fileID: 8219095793265487489, guid: 3f712b2cf0e116d45984da0d6ebd014e, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219095793265487489, guid: 3f712b2cf0e116d45984da0d6ebd014e, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8219095793272471905, guid: 3f712b2cf0e116d45984da0d6ebd014e, type: 3}
       propertyPath: m_RootOrder
       value: 2

@@ -11,7 +11,11 @@ public class SpawnManager : MonoBehaviour
     public PlayerController PlayerControllerScript;
     public int level;
 
-    public GameObject[] tvObstaclePrefabs;
+    
+    public float minSideZ = -10;
+    public float maxSideZ = -1;
+    public float sideX = 28;
+
 
     
 
@@ -41,11 +45,11 @@ public class SpawnManager : MonoBehaviour
     {
         if(PlayerControllerScript.gameOver == false && level ==2)
         {
-            int obstacleIndex = Random.Range(0, tvObstaclePrefabs.Length);
-            Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            
+            Vector3 spawnPos = new Vector3(sideX, 0, Random.Range(minSideZ, maxSideZ));
 
-            Vector3 rotation = new Vector3(0, 180, 0);
-            Instantiate(tvObstaclePrefabs[obstacleIndex], spawnPos, Quaternion.Euler(rotation));
+            Vector3 rotation = new Vector3(0, 0, 0);
+            Instantiate(obstaclePrefab, spawnPos, Quaternion.Euler(rotation));
         }
     }
 }

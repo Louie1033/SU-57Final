@@ -1014,11 +1014,11 @@ PrefabInstance:
     - target: {fileID: 8219095793265487489, guid: 3f712b2cf0e116d45984da0d6ebd014e, type: 3}
       propertyPath: m_Avatar
       value: 
-      objectReference: {fileID: 9000000, guid: 7aea2d469d67de44f9dd680a5088c739, type: 3}
+      objectReference: {fileID: 9000000, guid: a0735c0199160ca47923f5c5b01bbc9d, type: 3}
     - target: {fileID: 8219095793265487489, guid: 3f712b2cf0e116d45984da0d6ebd014e, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 75d3a58b3d7879f41926561701407a48, type: 2}
+      objectReference: {fileID: 9100000, guid: eb79e3fd0dd669f40a90a984b92a0ccf, type: 2}
     - target: {fileID: 8219095793265487489, guid: 3f712b2cf0e116d45984da0d6ebd014e, type: 3}
       propertyPath: m_UpdateMode
       value: 0
